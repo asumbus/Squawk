@@ -92,7 +92,7 @@ if __name__ == '__main__':
             speed = (gpsc.fix.speed * 2.2369)
 
 
-
+            # Old Locations saved for luck
             #uc_north, uc_east, uc_head = (272772.43, 5194173.36, 207)
             #science_north, science_east, science_head = (272422.99, 5193611.66, 270)
             #dorn_north, dorn_east, dorn_head = (271683.60, 5192717.74, 270)
@@ -119,6 +119,7 @@ if __name__ == '__main__':
                 # print track
                 s = str(track)
 
+                # Definition of function 
                 #tracker(stop_north, stop_east, stop_heading, circle_size, 'stop_name', 'mp3')
 
                 #UC
