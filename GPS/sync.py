@@ -1,7 +1,8 @@
 # Version 3
 import urllib2
 import time
-#import git
+import subprocess
+
 
 flag_internet = False
 
@@ -22,8 +23,8 @@ def sync():
         time.sleep(3)
         while not flag_internet:
             print 'start update'
-            repo = git.Repo('/home/pi/Desktop')
-            repo.remotes.origin.pull()
+            output = subprocess.check_output(["git", "pull"])
+            output
             flag_internet = True
     else:
         return
