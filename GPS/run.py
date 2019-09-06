@@ -1,4 +1,4 @@
-# Version 5.0 - Now with less YAY!!
+# Version 5.0 - Now with less but more YAY!!
 
 from gps import *
 import os
