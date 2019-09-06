@@ -22,8 +22,8 @@ def sync():
         time.sleep(3)
         while not flag_internet:
             print 'start update'
-            #os.system('/home/pi/Desktop/GPS/sync.sh')
-            #log.write('\n Ran sync script')
+            repo = git.Repo('/home/pi/Desktop')
+            repo.remotes.origin.pull()
             flag_internet = True
     else:
         return
@@ -47,7 +47,7 @@ if __name__ == '__main__':
         print "User cancelled"
 
     finally:
-        print "Stopping gps controller"
+        print "Closing out of update"
 
 
     print "Done"
