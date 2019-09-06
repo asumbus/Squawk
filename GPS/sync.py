@@ -1,6 +1,6 @@
 # Version 3
 import urllib2
-import git
+#import git
 
 flag_internet = False
 
