@@ -1,7 +1,6 @@
 # Version 3
 import urllib2
 import time
-import os
 import subprocess
 
 
@@ -39,7 +38,6 @@ if __name__ == '__main__':
         while internet_on():
             sync()
             time.sleep(2)
-            os.system('sudo shutdown -r now')
             break
         else:
             print 'Waiting'
