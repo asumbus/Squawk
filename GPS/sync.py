@@ -1,5 +1,6 @@
 # Version 3
 import urllib2
+import time
 #import git
 
 flag_internet = False
