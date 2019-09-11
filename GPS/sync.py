@@ -5,12 +5,13 @@ import subprocess
 
 
 flag_internet = False
+count = 0
 
 # has internets
 def internet_on():
     try:
         response=urllib2.urlopen('http://google.com',timeout=5)
-        print 'internet'
+        print 'found the internets'
         return True
     except urllib2.URLError as err: pass
     return False
@@ -34,14 +35,19 @@ def sync():
 
 if __name__ == '__main__':
     try:
-
-        while internet_on():
-            sync()
-            time.sleep(2)
-            break
-        else:
-            print 'Waiting'
-            time.sleep(2)
+        while true:
+            print count
+            if internet_on():
+                sync()
+                time.sleep(10)
+                break
+            elif count >= 10:
+                print 'Cant live without internets!'
+                break
+            else:
+                print 'Waiting for internets'
+                count += 1
+                time.sleep(60)
 
     # Ctrl C
     except KeyboardInterrupt:
