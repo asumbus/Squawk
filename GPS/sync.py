@@ -35,7 +35,7 @@ def sync():
 
 if __name__ == '__main__':
     try:
-        while true:
+        while True:
             print count
             if internet_on():
                 sync()
