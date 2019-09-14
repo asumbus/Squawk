@@ -1,0 +1,13 @@
+[Unit]
+Description=UDASH AVA
+After=multi-user.target
+
+[Service]
+ExecStart=/bin/bash -c '/usr/bin/python /home/pi/Desktop/GPS/run.py > /home/pi/Desktop/GPS/logs/run.log 2>&1'
+Restart=always
+RestartSec=10s
+KillMode=process
+TimeoutSec=infinity
+
+[Install]
+WantedBy=multi-user.target
