@@ -24,7 +24,7 @@ def sync():
         time.sleep(3)
         while not flag_internet:
             print 'start update'
-            output = subprocess.check_output(["git", "pull"])
+            output = subprocess.check_output(["git", "pull"], cwd='home/pi/Desktop')
             output
             flag_internet = True
     else:
