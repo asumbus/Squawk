@@ -1,0 +1,9 @@
+[Unit]
+Description=UDASH AVA update
+After=network.target
+
+[Service]
+ExecStart=/bin/bash -c '/usr/bin/python /home/pi/Desktop/GPS/sync.py > /home/pi/Desktop/GPS/logs/update.log 2>&1'
+
+[Install]
+WantedBy=multi-user.target
