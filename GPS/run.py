@@ -84,7 +84,7 @@ if __name__ == '__main__':
     try:
         # start controller
         gpsc.start()
-        Print "Starting"
+        print "Starting"
         while True:
             status = gpsc.fix.mode
             speed = (gpsc.fix.speed * 2.2369)
