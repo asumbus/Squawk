@@ -4,8 +4,8 @@ After=multi-user.target
 
 [Service]
 ExecStart=/usr/bin/python /home/pi/Desktop/GPS/run.py
-StandardOutput=/home/pi/Desktop/GPS/run1.log
-StandardError=/home/pi/Desktop/GPS/run2.log
+StandardOutput=file:/home/pi/Desktop/GPS/run1.log
+StandardError=file:/home/pi/Desktop/GPS/run2.log
 Restart=always
 RestartSec=10s
 KillMode=process
