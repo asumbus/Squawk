@@ -1,9 +1,11 @@
 [Unit]
-Description=UDASH AVA
+Description=UDASHAVA
 After=multi-user.target
 
 [Service]
-ExecStart=/bin/bash -c '/usr/bin/python /home/pi/Desktop/GPS/run.py > /home/pi/Desktop/GPS/logs/run.log 2>&1'
+ExecStart=/usr/bin/python /home/pi/Desktop/GPS/run.py
+StandardOutput=/home/pi/Desktop/GPS/run1.log
+StandardError=/home/pi/Desktop/GPS/run2.log
 Restart=always
 RestartSec=10s
 KillMode=process
