@@ -65,8 +65,8 @@ def tracker(stop_north, stop_east, stop_heading, circle_size, delay_time, stop_n
         while not flag:
             print "Arriving at", stop_name
             os.system('mpg321 -q /home/pi/Desktop/GPS/audio/'+mp3+'.mp3')
-            flag = True
             time.sleep(delay_time)
+            flag = True
             break
         else:
             print "Still inside", stop_name
